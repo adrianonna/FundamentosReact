@@ -8,20 +8,23 @@ import Card from './components/layout/Card'
 import Repeticao from './components/basico/Repeticao'
 import Condicional from './components/basico/Condicional'
 import CondicionalComIf from './components/basico/CondicionalComIf'
+import Pai from './components/comunicacao/direta/Pai'
+import Super from './components/comunicacao/indireta/Super'
+
 
 
 export default (props) => (
     <div className="App">
-        <Card tituloFooter="#01 - Primeiro componente">
+        <Card tituloFooter="#01 - Primeiro componente" color="#92B06A">
             <Primeiro/>
         </Card>
-        <Card tituloFooter="#02 - Componente com parâmetro">
+        <Card tituloFooter="#02 - Componente com parâmetro" color="#FF85CB">
             <ComParametro titulo="Esse é um título"
                 subtitulo="Esse é um subtítulo" />
             <ComParametro titulo="Esse é um título 2"
                 subtitulo="Esse é um subtítulo 2" />
         </Card>
-        <Card tituloFooter="#03 - Componente com filho">
+        <Card tituloFooter="#03 - Componente com filho" color="#D96459">
             <ComFilhos>
                 <ul>
                     <li>Ana</li>
@@ -31,14 +34,20 @@ export default (props) => (
                 </ul>
             </ComFilhos>
         </Card>
-        <Card tituloFooter="#04 - Repetição">
+        <Card tituloFooter="#04 - Repetição" color="#008BBA">
             <Repeticao></Repeticao>
         </Card>
-        <Card tituloFooter="#05 - Condicional v1">
+        <Card tituloFooter="#05 - Condicional v1" color="#E94C6F">
             <Condicional numero={2}></Condicional>
         </Card>
-        <Card tituloFooter="#05 - Condicional v2">
+        <Card tituloFooter="#06 - Condicional v2" color="#FA6900">
             <CondicionalComIf numero={1}></CondicionalComIf>
+        </Card>
+        <Card tituloFooter="#07 - Comunicação direta" color="#4298B5">
+            <Pai sobrenome="Freitas"></Pai>
+        </Card>
+        <Card tituloFooter="#08 - Comunicação indireta" color="#000">
+            <Super></Super>
         </Card>
     </div>
 )
