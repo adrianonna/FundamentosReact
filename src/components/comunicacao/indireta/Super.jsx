@@ -6,7 +6,7 @@ export default props =>{
 
     // const [a, b] = [1, 2] //a=1 e b=2
 
-    const [texto, setTexto] = useState('Valor')
+    const [texto, setTexto] = useState('Valor') //retorna o valor e a função que altera esse valor
     const [num, setNum] = useState(0)
 
 
